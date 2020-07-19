@@ -31,7 +31,7 @@ class NavigationMenu extends Component {
       this.context.lang.get === "en" ? "JetBrains Mono" : "Noto Sans";
     return (
       <Grid.Column width={3}>
-        <Link to="/">
+        <Link to="/siyuans-hub/">
           <div
             style={{
               marginTop: "1em",
