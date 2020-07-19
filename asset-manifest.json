@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/siyuans-hub/static/css/main.1b436e0e.chunk.css",
-    "main.js": "/siyuans-hub/static/js/main.944b9b64.chunk.js",
-    "main.js.map": "/siyuans-hub/static/js/main.944b9b64.chunk.js.map",
+    "main.js": "/siyuans-hub/static/js/main.3281d231.chunk.js",
+    "main.js.map": "/siyuans-hub/static/js/main.3281d231.chunk.js.map",
     "runtime-main.js": "/siyuans-hub/static/js/runtime-main.076d807f.js",
     "runtime-main.js.map": "/siyuans-hub/static/js/runtime-main.076d807f.js.map",
     "static/js/2.2958db2c.chunk.js": "/siyuans-hub/static/js/2.2958db2c.chunk.js",
     "static/js/2.2958db2c.chunk.js.map": "/siyuans-hub/static/js/2.2958db2c.chunk.js.map",
     "index.html": "/siyuans-hub/index.html",
-    "precache-manifest.3718eaa2a6b02eb457dbafda98b6b6c0.js": "/siyuans-hub/precache-manifest.3718eaa2a6b02eb457dbafda98b6b6c0.js",
+    "precache-manifest.13810a59491258a528eb7dd1b3e2b946.js": "/siyuans-hub/precache-manifest.13810a59491258a528eb7dd1b3e2b946.js",
     "service-worker.js": "/siyuans-hub/service-worker.js",
     "static/css/main.1b436e0e.chunk.css.map": "/siyuans-hub/static/css/main.1b436e0e.chunk.css.map",
     "static/js/2.2958db2c.chunk.js.LICENSE.txt": "/siyuans-hub/static/js/2.2958db2c.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.076d807f.js",
     "static/js/2.2958db2c.chunk.js",
     "static/css/main.1b436e0e.chunk.css",
-    "static/js/main.944b9b64.chunk.js"
+    "static/js/main.3281d231.chunk.js"
   ]
 }
