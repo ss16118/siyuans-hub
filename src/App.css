@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: local("JetBrains Mono"),
+    url(./fonts/JetBrainsMono-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Long Cang";
+  src: local("Long Cang"), url(./fonts/LongCang-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: local("Noto Sans"),
+    url(./fonts/NotoSansSC-Regular.otf) format("opentype");
+}
+
+blockquote {
+  color: #666;
+  margin: 0;
+  padding-left: 1em;
+  border-left: 0.5em #eee solid;
+}

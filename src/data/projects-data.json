@@ -1,0 +1,53 @@
+[
+  {
+    "title": { "en": "ImperialCode", "cn": "ImperialCode" },
+    "description": {
+      "en": "The webapp project in the last term of the second year. A LeetCode-like website that allows computing students to practice for coding exams more effectively.",
+      "cn": "大二最后一个学期的webapp项目。这是一个和LeetCode类似的网站，里头有不少为了我们计算机系的学生准备编程考试准备的特别设计。"
+    },
+    "link": "https://github.com/ss16118/imperialcode"
+  },
+  {
+    "title": { "en": "WACC Language Compiler", "cn": "WACC语言编译器" },
+    "description": {
+      "en": "WACC is a simple language which the Department of Computing at Imperial uses to teach the basics of compilers. This is the WACC compiler that my group built. It is written in Kotlin. For the extension of the project, we included some cool features like tagged union and type interface.",
+      "cn": "WACC是我们系里头用来教编译器基础的一门非常简单的语言。这个项目就是我们小组给WACC这门语言写的编译器，用的是Kotlin。作为这个项目的拓展，我们还多加了点挺厉害的东西，像是什么标签联合（tagged union）还有界面（interface）。"
+    },
+    "link": "https://github.com/ss16118/wacc"
+  },
+  {
+    "title": {
+      "en": "VSCode WACC Language Support Extension",
+      "cn": "VSCode WACC语言插件"
+    },
+    "description": {
+      "en": "It is an extension that I wrote for VSCode to help people write WACC (although I doubt it will ever be a language that anyone would use, other than Imperial students of course). It includes syntax highlighting, code diagnostics for WACC, and you can even run WACC code directly using the extension.",
+      "cn": "这是我给WACC语言写的一个VSCode的小插件（当然我不觉得除了我们学校的人以外还会有别人想要用这门语言）。插件主要提供了语法高亮还有代码纠错，也可以直接用插件跑WACC的代码。"
+    },
+    "link": "https://github.com/ss16118/wacc-language-support"
+  },
+  {
+    "title": { "en": "Pintos OS", "cn": "Pintos OS" },
+    "description": {
+      "en": "Almost the exact same as the Stanford Pintos, except that students at our department didn't have to do the last task, which is writing a file system for the OS.",
+      "cn": "和斯坦福的Pintos几乎一模一样，唯一的区别就是我们系的学生并不用写OS的文件系统。"
+    },
+    "link": "https://github.com/ss16118/pintos"
+  },
+  {
+    "title": { "en": "Hate Speech Detection", "cn": "仇恨言论检测" },
+    "description": {
+      "en": "One of the UROP projcts I did under the supervision of Dr. Bjeorn Schuller in my first year. I learned how to use Tensorflow and helped complete a paper on detecting hate speech on twitter. I also participated in another project on adversarial training on emotion recognition, and if that paper is ever published, I will include it here as well.",
+      "cn": "大一的时候在Bjeorn Schuller教授手底下做的项目之一。我自学了点Tensorflow然后给他们的论文帮了点忙。这篇paper是有关用神经网络检测推特上的仇恨言论的。当时还参与了另外一个和对抗训练（adversarial training）有关的项目，到时候他们要是发了论文估计也会放在这儿吧。"
+    },
+    "link": "../contents/projects/hate-speech-detection/hate-speech-detection.pdf"
+  },
+  {
+    "title": { "en": "ARM Emulator and Assembler", "cn": "ARM模拟器和汇编器" },
+    "description": {
+      "en": "This is the group project at the last term of the first year. It's includes a simple ARM emulator and assembler, and of course it only provides the functionality for a small subset of all the ARM instructions.",
+      "cn": "大一最后一个学期的大作业。就是一个简单的ARM模拟器还有汇编器，只支持很小一部分的ARM指令集。"
+    },
+    "link": "https://github.com/ss16118/arm-assembler"
+  }
+]

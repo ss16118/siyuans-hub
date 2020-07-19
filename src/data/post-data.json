@@ -1,0 +1,22 @@
+[
+  {
+    "id": "post1",
+    "title": { "en": "Post 1", "cn": "文章 1" },
+    "date": "13/07/2020",
+    "tags": { "en": ["tag1", "tag2"], "cn": ["标签1", "标签2"] },
+    "path": {
+      "en": "../contents/posts/post1/post1-en.md",
+      "cn": "../contents/posts/post1/post1-cn.md"
+    }
+  },
+  {
+    "id": "post2",
+    "title": { "en": "Post 2", "cn": "文章 2" },
+    "date": "13/07/2020",
+    "tags": { "en": ["tag1", "tag2"], "cn": ["标签1", "标签2"] },
+    "path": {
+      "en": "../contents/posts/post2/post2-en.md",
+      "cn": "../contents/posts/post2/post2-cn.md"
+    }
+  }
+]
