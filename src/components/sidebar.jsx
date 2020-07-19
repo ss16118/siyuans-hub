@@ -7,14 +7,14 @@ import { Image } from "semantic-ui-react";
 
 class NavigationMenu extends Component {
   tabs = [
-    ["Home", "首页", "/"],
-    ["Blog", "博客", "/blog"],
-    ["Projects", "项目", "/projects"],
+    ["Home", "首页", "/siyuans-hub/"],
+    ["Blog", "博客", "/siyuans-hub/blog"],
+    ["Projects", "项目", "/siyuans-hub/projects"],
   ];
 
   constructor(props) {
     super(props);
-    let itemName = window.location.pathname.substr(1);
+    let itemName = window.location.pathname.substr(13);
     itemName =
       itemName === ""
         ? "Home"
@@ -43,7 +43,7 @@ class NavigationMenu extends Component {
             }}
           >
             <Image
-              src="/favicon/favicon-32x32.png"
+              src="/siyuans-hub/favicon/favicon-32x32.png"
               verticalAlign="middle"
               style={{ marginRight: "0.5em" }}
             />

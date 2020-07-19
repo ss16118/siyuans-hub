@@ -40,7 +40,7 @@
       "en": "One of the UROP projcts I did under the supervision of Dr. Bjeorn Schuller in my first year. I learned how to use Tensorflow and helped complete a paper on detecting hate speech on twitter. I also participated in another project on adversarial training on emotion recognition, and if that paper is ever published, I will include it here as well.",
       "cn": "大一的时候在Bjeorn Schuller教授手底下做的项目之一。我自学了点Tensorflow然后给他们的论文帮了点忙。这篇paper是有关用神经网络检测推特上的仇恨言论的。当时还参与了另外一个和对抗训练（adversarial training）有关的项目，到时候他们要是发了论文估计也会放在这儿吧。"
     },
-    "link": "../contents/projects/hate-speech-detection/hate-speech-detection.pdf"
+    "link": "../siyuans-hub/contents/projects/hate-speech-detection/hate-speech-detection.pdf"
   },
   {
     "title": { "en": "ARM Emulator and Assembler", "cn": "ARM模拟器和汇编器" },

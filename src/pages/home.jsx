@@ -4,7 +4,8 @@ import MarkdownSection from "../components/markdownSection";
 
 class Home extends Component {
   render() {
-    const bioPath = "contents/bio-" + this.context.lang.get + ".md";
+    const bioPath =
+      "/siyuans-hub/contents/bio-" + this.context.lang.get + ".md";
     const pageContent = (
       <MarkdownSection
         key={bioPath}

@@ -44,9 +44,13 @@ class App extends Component {
             <Grid.Column stretched width={10} style={{ height: "100%" }}>
               <Segment style={{ padding: "1.5em", overflow: "auto" }}>
                 <Switch>
-                  <Route path="/" exact component={Home} />
-                  <Route path="/blog" exact component={Blog} />
-                  <Route path="/projects" exact component={Projects} />
+                  <Route path="/siyuans-hub/" exact component={Home} />
+                  <Route path="/siyuans-hub/blog" exact component={Blog} />
+                  <Route
+                    path="/siyuans-hub/projects"
+                    exact
+                    component={Projects}
+                  />
                   {/* Posts */}
                   {postData.map((post) => {
                     return (
