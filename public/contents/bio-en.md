@@ -12,5 +12,5 @@ I guess there won't be too many visitors (if there are any visitors at all), yet
   <img src="../siyuans-hub/contents/wechat.jpg" alt="Wechat QR Code" style="width:100px;height:100px;"/>
 </p>
 
-> All contents on this site are in both English and Chinese, and since I'm not an English major, please go easy on the translation.
-> It's my first time using React (I have to say that React is definitely easier to use than Django to build static websites), that's why the UI can be fancier for sure, thanks for understanding.
+> All contents on this site are in both English and Chinese, and since translation is not my forte, please excuse the mistakes that I've made.
+> It's my first time using React, that's why the UI seems a bit crude, and there are probably bugs as well. Thanks for understanding.
