@@ -91,6 +91,7 @@
 
 P.S. 小说里头居然还提到了星际牛仔和萤火虫，作为老宅男我激动了。
 
+[豆瓣连接](https://movie.douban.com/review/12748043/)
 
 ### 参考：
 [Ready Player One Wiki](https://readyplayerone.fandom.com/wiki/)
