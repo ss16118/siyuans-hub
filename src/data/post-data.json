@@ -1,22 +1,18 @@
 [
   {
-    "id": "post1",
-    "title": { "en": "Post 1", "cn": "文章 1" },
-    "date": "13/07/2020",
-    "tags": { "en": ["tag1", "tag2"], "cn": ["标签1", "标签2"] },
+    "id": "ready-player-one",
+    "title": {
+      "en": "Hollywood-style Fantasy Utopia vs. Cold Cruel Cyberpunk: A Brief Discussion on the Differences between the Movie Adaptation and Original Novel of \"Ready Player One\"",
+      "cn": "好莱坞式的幻想乌托邦 vs. 冰冷残酷的赛博朋克：浅谈《头号玩家》电影与原著小说的不同"
+    },
+    "date": "23/07/2020",
+    "tags": {
+      "en": ["Sci-Fi", "Cyberpunk", "Movie", "Novel"],
+      "cn": ["科幻", "赛博朋克", "电影", "小说"]
+    },
     "path": {
-      "en": "../contents/posts/post1/post1-en.md",
-      "cn": "../contents/posts/post1/post1-cn.md"
-    }
-  },
-  {
-    "id": "post2",
-    "title": { "en": "Post 2", "cn": "文章 2" },
-    "date": "13/07/2020",
-    "tags": { "en": ["tag1", "tag2"], "cn": ["标签1", "标签2"] },
-    "path": {
-      "en": "../contents/posts/post2/post2-en.md",
-      "cn": "../contents/posts/post2/post2-cn.md"
+      "en": "/siyuans-hub/contents/posts/ready-player-one/ready-player-one-en.md",
+      "cn": "/siyuans-hub/contents/posts/ready-player-one/ready-player-one-cn.md"
     }
   }
 ]

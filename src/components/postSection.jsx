@@ -17,7 +17,7 @@ class PostSection extends Component {
 
   render() {
     return (
-      <Card fluid as={Link} to={`/blog/${this.state.id}`}>
+      <Card fluid as={Link} to={`/siyuans-hub/blog/${this.state.id}`}>
         <Card.Content>
           <Card.Header style={{ fontSize: "16px", marginBottom: "0.3em" }}>
             {this.state.title}

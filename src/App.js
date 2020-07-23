@@ -57,7 +57,7 @@ class App extends Component {
                       <Route
                         key={post.title[lang]}
                         exact
-                        path={`/blog/${post.id}`}
+                        path={`/siyuans-hub/blog/${post.id}`}
                       >
                         <MarkdownSection
                           filePath={post.path[lang]}

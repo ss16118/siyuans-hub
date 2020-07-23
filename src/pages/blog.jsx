@@ -13,26 +13,26 @@ class Blog extends Component {
     return (
       <div>
         <h1 style={{ fontFamily: font }}>{this.pageTitle[lang]}</h1>
-        {/* 
-        <Segment secondary>
-          <Container>
-            <Card.Group>
-              {postData.map((post) => {
-                return (
-                  <PostSection
-                    key={post.title[lang]}
-                    style={{ fontFamily: font }}
-                    id={post.id}
-                    title={post.title[lang]}
-                    date={post.date}
-                    tags={post.tags[lang]}
-                  />
-                );
-              })}
-            </Card.Group>
-          </Container>
-        </Segment>
-        */}
+        {
+          <Segment secondary>
+            <Container>
+              <Card.Group>
+                {postData.map((post) => {
+                  return (
+                    <PostSection
+                      key={post.title[lang]}
+                      style={{ fontFamily: font }}
+                      id={post.id}
+                      title={post.title[lang]}
+                      date={post.date}
+                      tags={post.tags[lang]}
+                    />
+                  );
+                })}
+              </Card.Group>
+            </Container>
+          </Segment>
+        }
       </div>
     );
   }
