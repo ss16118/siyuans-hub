@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Menu } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import LanguageSelector from "./languageSelector";
 import { globalContext } from "./siteContext";
@@ -30,12 +30,12 @@ class NavigationMenu extends Component {
     const font =
       this.context.lang.get === "en" ? "JetBrains Mono" : "Noto Sans";
     return (
-      <Grid.Column width={3}>
+      <React.Fragment>
         <Link to="/siyuans-hub/">
           <div
             style={{
-              marginTop: "1em",
-              marginLeft: "1em",
+              marginTop: "2em",
+              marginLeft: "2em",
               marginBottom: "1.5em",
               fontFamily: "JetBrains Mono",
               fontSize: "18px",
@@ -68,7 +68,7 @@ class NavigationMenu extends Component {
                 name={tab[displayIndex]}
                 as={Link}
                 to={tab[2]}
-                style={{ fontFamily: font }}
+                style={{ fontFamily: font, paddingLeft: "2em" }}
                 active={activeItem === tab[0]}
                 onClick={this.handleItemClick}
               />
@@ -76,12 +76,12 @@ class NavigationMenu extends Component {
           })}
           <Menu.Item
             attached="bottom"
-            style={{ marginTop: "185%", textAlign: "center", border: "none" }}
+            style={{ marginTop: "155%", textAlign: "center", border: "none" }}
           >
             <LanguageSelector />
           </Menu.Item>
         </Menu>
-      </Grid.Column>
+      </React.Fragment>
     );
   }
 }

@@ -1,0 +1,26 @@
+.ui.button.music-player-button {
+  background-color: transparent;
+}
+.ui.button.music-player-button:hover {
+  background-color: #ceecf6;
+}
+.ui.grid > .row > .column {
+  padding: 0em;
+}
+
+.song-selection {
+  background-color: transparent;
+}
+
+.song-selection:hover {
+  cursor: pointer;
+  background-color: #ceecf6;
+}
+
+.ui.small.progress:hover {
+  cursor: pointer;
+}
+
+.MuiSlider-root.custom-slider {
+  color: #2185d0;
+}

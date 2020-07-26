@@ -4,6 +4,20 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import GlobalContextProvider from "./components/siteContext";
+import figlet from "figlet";
+import standard from "figlet/importable-fonts/Standard.js";
+
+/* Easter Egg */
+figlet.parseFont("Standard", standard);
+figlet.text(
+  "Welcome to\nSiyuan's Hub",
+  {
+    font: "Standard",
+  },
+  function (_, data) {
+    console.log(data);
+  }
+);
 
 ReactDOM.render(
   <GlobalContextProvider>

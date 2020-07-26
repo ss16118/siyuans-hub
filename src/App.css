@@ -60,3 +60,18 @@ blockquote {
   padding-left: 1em;
   border-left: 0.5em #eee solid;
 }
+
+.ui.left.internal.rail {
+  padding: 0;
+  margin: 0;
+}
+
+.ui.right.internal.rail {
+  padding: 0;
+  margin: 0;
+}
+
+.ui.menu.fluid,
+.ui.vertical.menu.fluid {
+  width: 95% !important;
+}
