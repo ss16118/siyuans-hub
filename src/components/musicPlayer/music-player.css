@@ -24,3 +24,7 @@
 .MuiSlider-root.custom-slider {
   color: #2185d0;
 }
+
+.ui.styled.accordion .accordion .content {
+  padding: 1em;
+}

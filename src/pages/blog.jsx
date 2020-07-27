@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { globalContext } from "../components/siteContext";
 import PostSection from "../components/postSection";
-import { Card, Container, Segment } from "semantic-ui-react";
+import { Container, Segment, Item } from "semantic-ui-react";
 import postData from "../data/post-data.json";
 
 class Blog extends Component {
   state = {};
   pageTitle = { en: "Blog", cn: "博客" };
   render() {
+    let posts = postData.slice(0, 1);
     const lang = this.context.lang.get;
     const font = lang === "en" ? "JetBrains Mono" : "Noto Sans";
     return (
@@ -16,8 +17,8 @@ class Blog extends Component {
         {
           <Segment secondary>
             <Container>
-              <Card.Group>
-                {postData.map((post) => {
+              <Item.Group>
+                {posts.map((post) => {
                   return (
                     <PostSection
                       key={post.title[lang]}
@@ -26,10 +27,12 @@ class Blog extends Component {
                       title={post.title[lang]}
                       date={post.date}
                       tags={post.tags[lang]}
+                      imagePath={post.image}
+                      font={font}
                     />
                   );
                 })}
-              </Card.Group>
+              </Item.Group>
             </Container>
           </Segment>
         }

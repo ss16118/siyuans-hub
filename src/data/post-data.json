@@ -2,14 +2,15 @@
   {
     "id": "ready-player-one",
     "title": {
-      "en": "Hollywood-style Fantasy Utopia vs. Cold Cruel Cyberpunk: A Brief Discussion on the Differences between the Movie Adaptation and Original Novel of \"Ready Player One\"",
-      "cn": "好莱坞式的幻想乌托邦 vs. 冰冷残酷的赛博朋克：浅谈《头号玩家》电影与原著小说的不同"
+      "en": "Hollywood-style Fantasy Utopia vs. Cold Cruel Cyberpunk:<br/>A Brief Discussion on the Differences between the Movie Adaptation and Original Novel of \"Ready Player One\"",
+      "cn": "好莱坞式的幻想乌托邦 vs. 冰冷残酷的赛博朋克：<br/>浅谈《头号玩家》电影与原著小说的不同"
     },
     "date": "23/07/2020",
     "tags": {
       "en": ["Sci-Fi", "Cyberpunk", "Movie", "Novel"],
       "cn": ["科幻", "赛博朋克", "电影", "小说"]
     },
+    "image": "/siyuans-hub/contents/posts/ready-player-one/ready-player-one.jpg",
     "path": {
       "en": "/siyuans-hub/contents/posts/ready-player-one/ready-player-one-en.md",
       "cn": "/siyuans-hub/contents/posts/ready-player-one/ready-player-one-cn.md"
@@ -26,6 +27,7 @@
       "en": ["VS Code Extension", "Typescript", "Custom Programming Language"],
       "cn": ["VS COde 插件", "Typescript", "自制编程语言"]
     },
+    "image": "",
     "path": {
       "en": "/siyuans-hub/contents/posts/vscode-extension-for-custom-language/vscode-extension-for-custom-language-en.md",
       "cn": "/siyuans-hub/contents/posts/vscode-extension-for-custom-language/vscode-extension-for-custom-language-cn.md"

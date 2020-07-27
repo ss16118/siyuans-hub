@@ -75,3 +75,10 @@ blockquote {
 .ui.vertical.menu.fluid {
   width: 95% !important;
 }
+
+.ui.items > .item > .image {
+  height: 110px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
