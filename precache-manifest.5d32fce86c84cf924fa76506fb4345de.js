@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ded54220172db5f3cb94b167106a01b",
+    "revision": "410e1ef4271b3ac847591be7963044eb",
     "url": "/siyuans-hub/index.html"
   },
   {
-    "revision": "d0f1b0888bfd2ebba167",
-    "url": "/siyuans-hub/static/css/main.8c7e6be6.chunk.css"
+    "revision": "4c916a75b72d4963d0b7",
+    "url": "/siyuans-hub/static/css/main.9b8126f6.chunk.css"
   },
   {
-    "revision": "6f2f2a6c8681ca61738e",
-    "url": "/siyuans-hub/static/js/2.5a002f9a.chunk.js"
+    "revision": "a3047e02f94d298c66d4",
+    "url": "/siyuans-hub/static/js/2.bb91ab4d.chunk.js"
   },
   {
     "revision": "d81a15589363dab2e52c88a7eec80340",
-    "url": "/siyuans-hub/static/js/2.5a002f9a.chunk.js.LICENSE.txt"
+    "url": "/siyuans-hub/static/js/2.bb91ab4d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d0f1b0888bfd2ebba167",
-    "url": "/siyuans-hub/static/js/main.d47565f1.chunk.js"
+    "revision": "4c916a75b72d4963d0b7",
+    "url": "/siyuans-hub/static/js/main.386b5a11.chunk.js"
   },
   {
     "revision": "b8805548b1f289bdae72",
