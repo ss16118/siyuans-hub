@@ -20,6 +20,7 @@
     "react-router-dom": "^5.2.0",
     "react-router-native": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-syntax-highlighter": "^13.0.0",
     "yarn": "^1.22.4"
   },
   "scripts": {

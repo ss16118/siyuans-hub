@@ -82,3 +82,21 @@ blockquote {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+a:hover {
+  cursor: pointer;
+}
+
+.ui.divided.items > .item:first-child {
+  padding: 1em !important;
+}
+
+.ui.divided.items > .item:last-child {
+  padding: 1em !important;
+}
+
+pre {
+  background-color: rgb(240, 240, 240) !important;
+  padding: 1em !important;
+  border-radius: 3px;
+}

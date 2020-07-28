@@ -91,10 +91,10 @@ class MusicPlayer extends Component {
   handleVolumeChange(value) {}
 
   componentDidMount() {
-    this.setState({ isPlaying: true });
     this.refs.player.volume = this.state.volume;
     try {
-      this.refs.player.play();
+      // this.refs.player.play();
+      // this.setState({ isPlaying: true });
     } catch (err) {
       console.log(err);
     }

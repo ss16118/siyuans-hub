@@ -8,16 +8,16 @@ class Blog extends Component {
   state = {};
   pageTitle = { en: "Blog", cn: "博客" };
   render() {
-    let posts = postData.slice(0, 1);
+    const posts = postData; //.slice(0, 1);
     const lang = this.context.lang.get;
     const font = lang === "en" ? "JetBrains Mono" : "Noto Sans";
     return (
       <div>
         <h1 style={{ fontFamily: font }}>{this.pageTitle[lang]}</h1>
         {
-          <Segment secondary>
+          <Segment>
             <Container>
-              <Item.Group>
+              <Item.Group divided>
                 {posts.map((post) => {
                   return (
                     <PostSection
