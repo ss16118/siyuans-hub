@@ -27,7 +27,7 @@ class App extends Component {
               }}
             >
               <Grid.Column width={3}>
-                <Rail internal position="left">
+                <Rail internal position="left" style={{ width: "100%" }}>
                   <Sticky context={this.contextRef}>
                     <NavigationMenu />
                   </Sticky>

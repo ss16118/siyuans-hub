@@ -30,10 +30,10 @@ class LanguageSelector extends Component {
           aria-label="website language"
         >
           <ToggleButton value="en" aria-label="English">
-            <Flag name={"gb"} /> en
+            <Flag name="gb" /> en
           </ToggleButton>
           <ToggleButton value="cn" aria-label="Chinese">
-            <Flag name={"cn"} /> cn
+            <Flag name="cn" /> cn
           </ToggleButton>
         </ToggleButtonGroup>
       </div>

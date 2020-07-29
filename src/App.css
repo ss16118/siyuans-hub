@@ -100,3 +100,24 @@ pre {
   padding: 1em !important;
   border-radius: 3px;
 }
+
+.ui.secondary.pointing.menu .item {
+  padding: 1em 0.7em;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  white-space: pre-wrap !important;
+}
+
+figure {
+  margin: 0 !important;
+}
+
+.ui.label {
+  margin: 0.2em;
+}

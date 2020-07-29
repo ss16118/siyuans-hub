@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import WebApp from "./WebApp";
 import * as serviceWorker from "./serviceWorker";
 import GlobalContextProvider from "./components/siteContext";
 import figlet from "figlet";
@@ -21,7 +21,7 @@ figlet.text(
 
 ReactDOM.render(
   <GlobalContextProvider>
-    <App />
+    <WebApp />
   </GlobalContextProvider>,
   document.getElementById("root")
 );

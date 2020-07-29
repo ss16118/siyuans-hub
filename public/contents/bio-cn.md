@@ -8,6 +8,7 @@
 
 - 邮箱：[shen.siyuan@gmail.com](mailto:shen.siyuan@gmail.com)
 - 微信：
+
 <p align="center">
   <img src="../siyuans-hub/contents/wechat.jpg" alt="Wechat QR Code" style="width:100px;height:100px;"/>
 </p>

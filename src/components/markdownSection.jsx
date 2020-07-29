@@ -38,7 +38,7 @@ class MarkdownSection extends Component {
     const font = this.state.lang === "en" ? "JetBrains Mono" : "Noto Sans";
     return (
       <div style={{ fontFamily: font }}>
-        <Container textAlign="justified">
+        <Container>
           <ReactMarkdown
             escapeHtml={false}
             source={this.state.markdownText}

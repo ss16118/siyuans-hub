@@ -1,0 +1,16 @@
+{
+  "en": {
+    "navigation": {
+      "Home": "Home",
+      "Blog": "Blog",
+      "Projects": "Projects"
+    }
+  },
+  "cn": {
+    "navigation": {
+      "Home": "首页",
+      "Blog": "博客",
+      "Projects": "项目"
+    }
+  }
+}

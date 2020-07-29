@@ -8,6 +8,7 @@ I guess there won't be too many visitors (if there are any visitors at all), yet
 
 - Email：[shen.siyuan@gmail.com](mailto:shen.siyuan@gmail.com)
 - Wechat QR Code：
+
 <p align="center">
   <img src="../siyuans-hub/contents/wechat.jpg" alt="Wechat QR Code" style="width:100px;height:100px;"/>
 </p>

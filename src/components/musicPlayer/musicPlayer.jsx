@@ -93,6 +93,7 @@ class MusicPlayer extends Component {
   componentDidMount() {
     this.refs.player.volume = this.state.volume;
     try {
+      this.refs.player.muted = false;
       // this.refs.player.play();
       // this.setState({ isPlaying: true });
     } catch (err) {
@@ -162,7 +163,7 @@ class MusicPlayer extends Component {
 
     return (
       <React.Fragment>
-        <audio ref="player" onEnded={this.playNextSong.bind(this)}>
+        <audio ref="player" onEnded={this.playNextSong.bind(this)} muted>
           <source src={playlist[this.state.currentSong].path} />
         </audio>
         <Accordion

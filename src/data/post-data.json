@@ -8,7 +8,7 @@
     "date": "27/07/2020",
     "tags": {
       "en": ["VS Code Extension", "Typescript", "Custom Programming Language"],
-      "cn": ["VS COde 插件", "Typescript", "自制编程语言"]
+      "cn": ["VS Code 插件", "Typescript", "自制编程语言"]
     },
     "image": "/siyuans-hub/contents/posts/vscode-extension-for-custom-language/vscode-logo.png",
     "path": {

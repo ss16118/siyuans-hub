@@ -3,6 +3,7 @@ import { globalContext } from "../components/siteContext";
 import projectData from "../data/projects-data.json";
 import ProjectSection from "../components/projectSection";
 import { Card, Segment } from "semantic-ui-react";
+import MediaQuery from "react-responsive";
 
 class Projects extends Component {
   state = {};
@@ -14,19 +15,36 @@ class Projects extends Component {
       <div>
         <h1 style={{ fontFamily: font }}>{this.pageTitle[lang]}</h1>
         <Segment>
-          <Card.Group itemsPerRow={2}>
-            {projectData.map((project) => {
-              return (
-                <ProjectSection
-                  key={project.title[lang] + lang}
-                  lang={lang}
-                  title={project.title[lang]}
-                  description={project.description[lang]}
-                  link={project.link}
-                />
-              );
-            })}
-          </Card.Group>
+          <MediaQuery maxDeviceWidth={1224}>
+            <Card.Group itemsPerRow={1}>
+              {projectData.map((project) => {
+                return (
+                  <ProjectSection
+                    key={project.title[lang] + lang}
+                    lang={lang}
+                    title={project.title[lang]}
+                    description={project.description[lang]}
+                    link={project.link}
+                  />
+                );
+              })}
+            </Card.Group>
+          </MediaQuery>
+          <MediaQuery minDeviceWidth={1224}>
+            <Card.Group itemsPerRow={2}>
+              {projectData.map((project) => {
+                return (
+                  <ProjectSection
+                    key={project.title[lang] + lang}
+                    lang={lang}
+                    title={project.title[lang]}
+                    description={project.description[lang]}
+                    link={project.link}
+                  />
+                );
+              })}
+            </Card.Group>
+          </MediaQuery>
         </Segment>
       </div>
     );

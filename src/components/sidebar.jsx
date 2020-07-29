@@ -4,14 +4,9 @@ import { Link } from "react-router-dom";
 import LanguageSelector from "./languageSelector";
 import { globalContext } from "./siteContext";
 import { Image } from "semantic-ui-react";
+import labels from "../data/labels";
 
 class NavigationMenu extends Component {
-  tabs = [
-    ["Home", "首页", "/siyuans-hub/"],
-    ["Blog", "博客", "/siyuans-hub/blog"],
-    ["Projects", "项目", "/siyuans-hub/projects"],
-  ];
-
   constructor(props) {
     super(props);
     let itemName = window.location.pathname.substr(13);
@@ -25,10 +20,15 @@ class NavigationMenu extends Component {
   handleItemClick = (e, { id }) => this.setState({ activeItem: id });
 
   render() {
+    const url = {
+      Home: "/siyuans-hub/",
+      Blog: "/siyuans-hub/blog",
+      Projects: "/siyuans-hub/projects",
+    };
     const { activeItem } = this.state;
-    const displayIndex = this.context.lang.get === "en" ? 0 : 1;
-    const font =
-      this.context.lang.get === "en" ? "JetBrains Mono" : "Noto Sans";
+    const lang = this.context.lang.get;
+    const navLabels = labels[lang]["navigation"];
+    const font = lang === "en" ? "JetBrains Mono" : "Noto Sans";
     return (
       <React.Fragment>
         <Link to="/siyuans-hub/">
@@ -60,16 +60,16 @@ class NavigationMenu extends Component {
           </div>
         </Link>
         <Menu fluid vertical tabular>
-          {this.tabs.map((tab) => {
+          {Object.keys(navLabels).map((key) => {
             return (
               <Menu.Item
-                key={tab[0]}
-                id={tab[0]}
-                name={tab[displayIndex]}
+                key={navLabels[key]}
+                id={key}
+                name={navLabels[key]}
                 as={Link}
-                to={tab[2]}
+                to={url[key]}
                 style={{ fontFamily: font, paddingLeft: "2em" }}
-                active={activeItem === tab[0]}
+                active={activeItem === key}
                 onClick={this.handleItemClick}
               />
             );

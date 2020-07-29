@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { globalContext } from "./siteContext";
-import { Segment, Label, Item } from "semantic-ui-react";
+import { Image, Segment, Label, Item } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import MediaQuery from "react-responsive";
 
 class PostSection extends Component {
   state = {};
@@ -41,10 +42,16 @@ class PostSection extends Component {
           itemContainer.style.boxShadow = "none";
         }}
       >
-        <div
-          className="image"
-          style={{ backgroundImage: `url(${this.state.imagePath})` }}
-        ></div>
+        <MediaQuery maxDeviceWidth={1224}>
+          <Image src={this.state.imagePath} />
+        </MediaQuery>
+        <MediaQuery minDeviceWidth={1224}>
+          <div
+            className="image"
+            style={{ backgroundImage: `url(${this.state.imagePath})` }}
+          ></div>
+        </MediaQuery>
+
         <Segment
           style={{
             margin: 0,
