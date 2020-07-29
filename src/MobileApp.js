@@ -3,10 +3,11 @@ import Navbar from "./components/navbar";
 import Blog from "./pages/blog";
 import Projects from "./pages/projects";
 import Home from "./pages/home";
-import { Container, Sticky } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { globalContext } from "./components/siteContext";
 import MarkdownSection from "./components/markdownSection";
+import MusicPlayer from "./components/musicPlayer/musicPlayer";
 import postData from "./data/post-data.json";
 
 class MobileApp extends Component {
@@ -17,10 +18,14 @@ class MobileApp extends Component {
     return (
       <Router>
         <div ref={this.contextRef}>
-          <Sticky context={this.contextRef}>
-            <Navbar />
-          </Sticky>
-          <Container style={{ padding: "1em 0" }}>
+          <Navbar />
+          <Container
+            id="mobile-container"
+            style={{
+              padding: "4em 0",
+              paddingBottom: "7em",
+            }}
+          >
             <Switch>
               <Route path="/siyuans-hub/" exact component={Home} />
               <Route path="/siyuans-hub/blog" exact component={Blog} />
@@ -39,6 +44,7 @@ class MobileApp extends Component {
               })}
             </Switch>
           </Container>
+          <MusicPlayer />
         </div>
       </Router>
     );

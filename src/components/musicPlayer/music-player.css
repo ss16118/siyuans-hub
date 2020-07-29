@@ -4,6 +4,10 @@
 .ui.button.music-player-button:hover {
   background-color: #ceecf6;
 }
+.ui.button.mobile-button {
+  background-color: transparent;
+  padding: 0.4em !important;
+}
 .ui.grid > .row > .column {
   padding: 0em;
 }

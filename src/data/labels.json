@@ -4,6 +4,10 @@
       "Home": "Home",
       "Blog": "Blog",
       "Projects": "Projects"
+    },
+    "music": {
+      "title": "Music Player",
+      "playlist": "Playlist"
     }
   },
   "cn": {
@@ -11,6 +15,10 @@
       "Home": "首页",
       "Blog": "博客",
       "Projects": "项目"
+    },
+    "music": {
+      "title": "音乐播放器",
+      "playlist": "播放列表"
     }
   }
 }

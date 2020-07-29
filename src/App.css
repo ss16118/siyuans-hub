@@ -121,3 +121,7 @@ figure {
 .ui.label {
   margin: 0.2em;
 }
+
+#navbar {
+  transition: top 0.5s;
+}

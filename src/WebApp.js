@@ -6,7 +6,7 @@ class WebApp extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* Mobile phone view */}
+        {/* Mobile device view */}
         <MediaQuery maxDeviceWidth={1224}>
           <MobileApp />
         </MediaQuery>

@@ -39,7 +39,15 @@ class Navbar extends Component {
     const font = lang === "en" ? "JetBrains Mono" : "Noto Sans";
 
     return (
-      <Segment style={{ padding: "0.5em", width: "100%", borderRadius: 0 }}>
+      <Segment
+        id="navbar"
+        style={{
+          padding: "0.5em",
+          width: "100%",
+          borderRadius: 0,
+          position: "fixed",
+        }}
+      >
         <Menu
           pointing
           secondary

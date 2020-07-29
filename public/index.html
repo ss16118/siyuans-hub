@@ -33,6 +33,7 @@
       href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
     <title>Siyuan Shen | Siyuan's Hub</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
@@ -85,4 +86,38 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    if (typeof window !== "undefined") {
+      let prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        const maxScroll = document.body.clientHeight - window.innerHeight;
+        let currentScrollPos = window.pageYOffset;
+        if (
+          (maxScroll > 0 &&
+            prevScrollpos > currentScrollPos &&
+            prevScrollpos <= maxScroll) ||
+          (maxScroll <= 0 && prevScrollpos > currentScrollPos) ||
+          (prevScrollpos <= 0 && currentScrollPos <= 0)
+        ) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px"; // adjustable based your need
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    }
+
+    $("body").click(function (e) {
+      if (
+        document.getElementById("playlist") !== null &&
+        e.target.parentElement.getAttribute("id") !== "playlist-button" &&
+        document.getElementById("playlist").style.display === "flex"
+      ) {
+        document.getElementById("playlist").style.display = "none";
+      }
+
+      // if (document.getElementById("volume-slider") !== null && e.target.id )
+    });
+  </script>
 </html>
