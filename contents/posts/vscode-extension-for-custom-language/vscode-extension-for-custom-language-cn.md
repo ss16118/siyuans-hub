@@ -29,7 +29,7 @@
 然后你会看到以下提示。因为我们的目标是给自制语言写插件，所以当然选`New Language Support`。
 
 <p align="center">
-  <img src="/siyuans-hub/contents/posts/vscode-extension-for-custom-language/start-extension.png" alt="创建新插件" />
+  <img class="responsive" src="/siyuans-hub/contents/posts/vscode-extension-for-custom-language/start-extension.png" alt="创建新插件" />
 </p>
 
 之后的选项如下：
@@ -70,7 +70,7 @@ VS Code 的标记语法（Tokenization Grammar）是由 TextMate 语法支持的
 那么首先要做的是打开在 syntaxes 文件夹里的 tmLanguage.json 文件，主要内容如以下所示。
 
 <p align="center">
-  <img src="/siyuans-hub/contents/posts/vscode-extension-for-custom-language/tmLanguage-file.png" style="height: 400px"alt="语法文件" />
+  <img class="responsive" src="/siyuans-hub/contents/posts/vscode-extension-for-custom-language/tmLanguage-file.png" style="height: 400px"alt="语法文件" />
 </p>
 
 这里简单讲解一下几个重要的关键词：
