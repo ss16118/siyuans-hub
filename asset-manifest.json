@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/siyuans-hub/static/css/main.d41b6e62.chunk.css",
-    "main.js": "/siyuans-hub/static/js/main.dc216e14.chunk.js",
-    "main.js.map": "/siyuans-hub/static/js/main.dc216e14.chunk.js.map",
+    "main.css": "/siyuans-hub/static/css/main.7b8e99b8.chunk.css",
+    "main.js": "/siyuans-hub/static/js/main.2cbac459.chunk.js",
+    "main.js.map": "/siyuans-hub/static/js/main.2cbac459.chunk.js.map",
     "runtime-main.js": "/siyuans-hub/static/js/runtime-main.076d807f.js",
     "runtime-main.js.map": "/siyuans-hub/static/js/runtime-main.076d807f.js.map",
     "static/js/2.bef86c2a.chunk.js": "/siyuans-hub/static/js/2.bef86c2a.chunk.js",
     "static/js/2.bef86c2a.chunk.js.map": "/siyuans-hub/static/js/2.bef86c2a.chunk.js.map",
     "index.html": "/siyuans-hub/index.html",
-    "precache-manifest.81ea7c272b184a411cca7974f9f9476e.js": "/siyuans-hub/precache-manifest.81ea7c272b184a411cca7974f9f9476e.js",
+    "precache-manifest.9df512ec6dbb4a3e98faa24cacdc1944.js": "/siyuans-hub/precache-manifest.9df512ec6dbb4a3e98faa24cacdc1944.js",
     "service-worker.js": "/siyuans-hub/service-worker.js",
-    "static/css/main.d41b6e62.chunk.css.map": "/siyuans-hub/static/css/main.d41b6e62.chunk.css.map",
+    "static/css/main.7b8e99b8.chunk.css.map": "/siyuans-hub/static/css/main.7b8e99b8.chunk.css.map",
     "static/js/2.bef86c2a.chunk.js.LICENSE.txt": "/siyuans-hub/static/js/2.bef86c2a.chunk.js.LICENSE.txt",
     "static/media/App.css": "/siyuans-hub/static/media/NotoSansSC-Regular.4d782f41.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.076d807f.js",
     "static/js/2.bef86c2a.chunk.js",
-    "static/css/main.d41b6e62.chunk.css",
-    "static/js/main.dc216e14.chunk.js"
+    "static/css/main.7b8e99b8.chunk.css",
+    "static/js/main.2cbac459.chunk.js"
   ]
 }
