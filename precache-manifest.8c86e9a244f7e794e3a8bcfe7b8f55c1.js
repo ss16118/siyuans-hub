@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b912f476a5b9a6850a695b81726134dc",
+    "revision": "6725efc7f2533a02d3a36aabd1546040",
     "url": "/siyuans-hub/index.html"
   },
   {
-    "revision": "631004cd32ba0e55259b",
+    "revision": "9a683dad9fd648199aea",
     "url": "/siyuans-hub/static/css/main.7b8e99b8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/siyuans-hub/static/js/2.bef86c2a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "631004cd32ba0e55259b",
-    "url": "/siyuans-hub/static/js/main.b5fb24d9.chunk.js"
+    "revision": "9a683dad9fd648199aea",
+    "url": "/siyuans-hub/static/js/main.306600e2.chunk.js"
   },
   {
     "revision": "b8805548b1f289bdae72",
