@@ -88,7 +88,10 @@
   </body>
 
   <script>
-    if (typeof window !== "undefined") {
+    if (
+      typeof window !== "undefined" &&
+      document.getElementById("navbar") !== null
+    ) {
       let prevScrollpos = window.pageYOffset;
       window.onscroll = function () {
         const maxScroll = document.body.clientHeight - window.innerHeight;
