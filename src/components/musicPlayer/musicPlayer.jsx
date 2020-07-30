@@ -20,13 +20,14 @@ import "./music-player.css";
 import MediaQuery from "react-responsive";
 
 class MusicPlayer extends Component {
+  defaultVolume = 0.6;
   constructor(props) {
     super(props);
     this.state = {
       currentSong: 0,
       isPlaying: false,
       progress: 0.0,
-      volume: 0.6,
+      volume: 0.0,
       activeIndex: 0,
       showPlayer: 0,
     };
@@ -81,14 +82,10 @@ class MusicPlayer extends Component {
     this.setState({ isPlaying: true });
   }
 
-  handleVolumeChange(value) {}
-
   componentDidMount() {
     const menu = document.getElementById("playlist");
     if (menu) {
       const player = document.getElementById("mobile-music-player");
-      console.log("Music player height: " + player.clientHeight);
-      console.log("Playlist menu height: " + menu.clientHeight);
       menu.style.bottom = player.clientHeight + "px";
       menu.style.display = "none";
     }
@@ -96,17 +93,14 @@ class MusicPlayer extends Component {
     const volumeSlider = document.getElementById("volume-slider");
     if (volumeSlider) {
       const volumeButton = document.getElementById("volume-button");
-      volumeSlider.style.top =
-        volumeButton.getBoundingClientRect().top -
-        volumeSlider.clientHeight +
-        2 +
-        "px";
+      volumeSlider.style.bottom = 14 + volumeButton.clientHeight * 0.9 + "px";
       volumeSlider.style.left =
         volumeButton.getBoundingClientRect().left +
         volumeButton.clientWidth / 2 +
         "px";
       volumeSlider.style.display = "none";
     }
+    this.setState({ volume: this.defaultVolume });
     this.refs.player.volume = this.state.volume;
     try {
       this.refs.player.muted = false;
@@ -236,7 +230,10 @@ class MusicPlayer extends Component {
               zIndex: "100",
             }}
             valueLabelDisplay="auto"
-            onChange={(e, val) => this.setState({ volume: val / 100 })}
+            onChange={(e, val) => {
+              console.log("Volume: " + this.state.volume);
+              this.setState({ volume: val / 100 });
+            }}
           />
           <Segment
             id="mobile-music-player"
@@ -248,12 +245,15 @@ class MusicPlayer extends Component {
           >
             <Grid>
               <Grid.Row centered style={{ padding: "1em 0 0 0" }}>
-                <Header as="h4" style={{ fontFamily: "JetBrains Mono" }}>
+                <Header
+                  as="h4"
+                  style={{ fontFamily: "JetBrains Mono", fontSize: "12px" }}
+                >
                   {playlist[this.state.currentSong].artist} -{" "}
                   {playlist[this.state.currentSong].title}
                 </Header>
               </Grid.Row>
-              <Grid.Row columns={3}>
+              <Grid.Row>
                 <Grid.Column width={5}>
                   <Button.Group icon>
                     <Button
@@ -289,16 +289,29 @@ class MusicPlayer extends Component {
                   </Button.Group>
                 </Grid.Column>
                 <Grid.Column width={9} textAlign="center">
-                  <Grid style={{ position: "relative", top: "20%" }}>
+                  <Grid
+                    style={{
+                      position: "relative",
+                      top: "15%",
+                      marginLeft: "0.2em",
+                    }}
+                  >
                     <Grid.Row
                       columns="equal"
                       style={{ paddingBottom: 0, fontSize: "12px" }}
                     >
-                      <Grid.Column textAlign="center">
+                      <Grid.Column
+                        textAlign="center"
+                        style={{ fontSize: "11px" }}
+                      >
                         {this.refs.player &&
                           readableDuration(this.refs.player.currentTime)}
                       </Grid.Column>
-                      <Grid.Column width={9} textAlign="center">
+                      <Grid.Column
+                        width={9}
+                        textAlign="center"
+                        style={{ marginTop: "0.2em" }}
+                      >
                         <Progress
                           ref="songProgress"
                           active
@@ -309,7 +322,10 @@ class MusicPlayer extends Component {
                           onClick={this.setProgress.bind(this)}
                         />
                       </Grid.Column>
-                      <Grid.Column textAlign="center">
+                      <Grid.Column
+                        textAlign="center"
+                        style={{ fontSize: "11px" }}
+                      >
                         <span>
                           {this.refs.player &&
                             readableDuration(this.refs.player.duration)}
@@ -318,7 +334,11 @@ class MusicPlayer extends Component {
                     </Grid.Row>
                   </Grid>
                 </Grid.Column>
-                <Grid.Column width={2} textAlign="center">
+                <Grid.Column
+                  width={2}
+                  textAlign="center"
+                  style={{ paddingLeft: "0.5em" }}
+                >
                   <Button
                     id="volume-button"
                     className="mobile-button"
@@ -571,9 +591,9 @@ class SongSelectionItem extends Component {
 let readableDuration = function (seconds) {
   let sec = Math.floor(seconds);
   let min = Math.floor(sec / 60);
-  min = min >= 10 ? min : "0" + min;
+  min = min >= 10 ? min : "0" + (isNaN(min) ? 0 : min);
   sec = Math.floor(sec % 60);
-  sec = sec >= 10 ? sec : "0" + sec;
+  sec = sec >= 10 ? sec : "0" + (isNaN(sec) ? 0 : sec);
   return min + ":" + sec;
 };
 
