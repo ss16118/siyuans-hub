@@ -46,6 +46,7 @@ class Navbar extends Component {
           width: "100%",
           borderRadius: 0,
           position: "fixed",
+          zIndex: "1000",
         }}
       >
         <Menu

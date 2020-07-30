@@ -112,6 +112,12 @@
     }
 
     $("body").click(function (e) {
+      console.log(
+        "Playlist is present: " + document.getElementById("playlist") === null
+      );
+      console.log(
+        "Target parent id: " + e.target.parentElement.getAttribute("id")
+      );
       if (
         document.getElementById("playlist") !== null &&
         e.target.parentElement.getAttribute("id") !== "playlist-button" &&

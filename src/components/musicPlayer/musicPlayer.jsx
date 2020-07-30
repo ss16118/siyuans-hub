@@ -86,7 +86,10 @@ class MusicPlayer extends Component {
   componentDidMount() {
     const menu = document.getElementById("playlist");
     if (menu) {
-      menu.style.top = window.screen.height - 85 - menu.clientHeight + "px";
+      const player = document.getElementById("mobile-music-player");
+      console.log("Music player height: " + player.clientHeight);
+      console.log("Playlist menu height: " + menu.clientHeight);
+      menu.style.bottom = player.clientHeight + "px";
       menu.style.display = "none";
     }
 
@@ -236,6 +239,7 @@ class MusicPlayer extends Component {
             onChange={(e, val) => this.setState({ volume: val / 100 })}
           />
           <Segment
+            id="mobile-music-player"
             style={{
               width: "100%",
               position: "fixed",
