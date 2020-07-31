@@ -72,7 +72,7 @@
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
   </head>
-  <body>
+  <body id="body">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -122,15 +122,27 @@
       //If its not a mobile device use 'click'
       deviceEventType = "click";
     }
-
-    // $("body").on(deviceEventType, function (e) {
-    //   if (
-    //     document.getElementById("playlist") !== null &&
-    //     e.target.parentElement.getAttribute("id") !== "playlist-button" &&
-    //     document.getElementById("playlist").style.display === "flex"
-    //   ) {
-    //     document.getElementById("playlist").style.display = "none";
-    //   }
-    // });
+    document
+      .getElementById("body")
+      .addEventListener("touchstart", function (evt) {
+        const playlist = document.getElementById("playlist");
+        const posX = evt.touches[0].clientX;
+        const posY = evt.touches[0].clientY;
+        // If the touch is not within bounds
+        if (
+          playlist &&
+          playlist.style.display === "flex" &&
+          !(
+            posX > playlist.getBoundingClientRect().left &&
+            posX <
+              playlist.getBoundingClientRect().left + playlist.clientWidth &&
+            posY > playlist.getBoundingClientRect().top &&
+            posY < playlist.getBoundingClientRect().top + playlist.clientHeight
+          ) &&
+          evt.target.parentElement.getAttribute("id") !== "current-song"
+        ) {
+          playlist.style.display = "none";
+        }
+      });
   </script>
 </html>

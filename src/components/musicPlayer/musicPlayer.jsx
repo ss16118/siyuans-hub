@@ -30,11 +30,13 @@ class MusicPlayer extends Component {
       volume: 0.0,
       activeIndex: 0,
       showPlayer: 0,
+      hidePlayer: false,
     };
     this.registeredEvents = false;
     this.currentlyPlaying = 0;
     this.currentVolume = this.state.volume;
     this.savedVolume = 0;
+    this.init = true;
   }
   togglePlay() {
     const player = this.refs.player;
@@ -83,6 +85,19 @@ class MusicPlayer extends Component {
   }
 
   componentDidMount() {
+    this.initializeHiddenComponents();
+    this.setState({ volume: this.defaultVolume });
+    this.refs.player.volume = this.state.volume;
+    try {
+      this.refs.player.muted = false;
+      // this.refs.player.play();
+      // this.setState({ isPlaying: true });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  initializeHiddenComponents = () => {
     const menu = document.getElementById("playlist");
     if (menu) {
       const player = document.getElementById("mobile-music-player");
@@ -100,16 +115,8 @@ class MusicPlayer extends Component {
         "px";
       volumeSlider.style.display = "none";
     }
-    this.setState({ volume: this.defaultVolume });
-    this.refs.player.volume = this.state.volume;
-    try {
-      this.refs.player.muted = false;
-      // this.refs.player.play();
-      // this.setState({ isPlaying: true });
-    } catch (err) {
-      console.log(err);
-    }
-  }
+    this.init = false;
+  };
 
   handlePlaylistClick = (e, titleProps) => {
     const { index } = titleProps;
@@ -125,6 +132,25 @@ class MusicPlayer extends Component {
     const newIndex = showPlayer === index ? -1 : index;
 
     this.setState({ showPlayer: newIndex });
+  };
+
+  componentDidUpdate() {
+    if (this.init) {
+      this.initializeHiddenComponents();
+    }
+  }
+
+  hideMobilePlayer = () => {
+    const container = document.getElementById("mobile-container");
+    container.style.paddingBottom = "3em";
+    this.setState({ hidePlayer: true });
+  };
+
+  showMobilePlayer = () => {
+    const container = document.getElementById("mobile-container");
+    container.style.paddingBottom = "7em";
+    this.setState({ hidePlayer: false });
+    this.init = true;
   };
 
   toggleMute() {
@@ -170,6 +196,206 @@ class MusicPlayer extends Component {
         });
       }
     }
+    const mobilePlayer = (
+      <React.Fragment>
+        <Menu
+          id="playlist"
+          vertical
+          borderless
+          style={{
+            margin: 0,
+            width: "100%",
+            fontFamily: font,
+            position: "fixed",
+          }}
+        >
+          {playlist.map((song, index) => {
+            const isSelected = index === this.state.currentSong;
+            return (
+              <Menu.Item
+                key={song.title + isSelected}
+                onClick={this.selectSong.bind(this, index)}
+                style={{
+                  fontSize: "11px",
+                  width: "100%",
+                  padding: "0.5em 1em",
+                }}
+              >
+                <SongSelectionItem
+                  index={index}
+                  artist={song.artist}
+                  title={song.title}
+                  selected={isSelected}
+                />
+              </Menu.Item>
+            );
+          })}
+        </Menu>
+        <Slider
+          id="volume-slider"
+          className="custom-slider"
+          orientation="vertical"
+          value={this.state.volume * 100}
+          aria-labelledby="discrete-slider-small-steps"
+          step={20}
+          marks
+          min={0}
+          max={100}
+          style={{
+            marginTop: "0.2em",
+            position: "fixed",
+            padding: 0,
+            height: "40px",
+            zIndex: "100",
+          }}
+          valueLabelDisplay="auto"
+          onChange={(e, val) => {
+            console.log("Volume: " + this.state.volume);
+            this.setState({ volume: val / 100 });
+          }}
+        />
+        <Segment
+          id="mobile-music-player"
+          style={{
+            width: "100%",
+            position: "fixed",
+            bottom: "0px",
+          }}
+        >
+          <Grid>
+            <Grid.Row centered style={{ padding: "1em 0 0 0" }}>
+              <Header
+                id="current-song"
+                as="h4"
+                style={{ fontFamily: "JetBrains Mono", fontSize: "12px" }}
+                onClick={() => {
+                  const menu = document.getElementById("playlist");
+                  menu.style.display =
+                    menu.style.display === "none" ? "flex" : "none";
+                }}
+              >
+                <u>
+                  {playlist[this.state.currentSong].artist} -{" "}
+                  {playlist[this.state.currentSong].title}
+                </u>
+              </Header>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column width={5}>
+                <Button.Group icon>
+                  <Button
+                    id="playlist-button"
+                    className="mobile-button"
+                    icon="chevron down"
+                    size="mini"
+                    onClick={this.hideMobilePlayer}
+                  />
+                  <Button
+                    className="mobile-button"
+                    icon="angle double left"
+                    size="mini"
+                    onClick={this.playPreviousSong.bind(this)}
+                  />
+                  <Button
+                    ref="playButton"
+                    size="mini"
+                    className="mobile-button"
+                    icon={this.state.isPlaying ? "pause" : "play"}
+                    onClick={this.togglePlay.bind(this)}
+                  />
+                  <Button
+                    className="mobile-button"
+                    icon="angle double right"
+                    size="mini"
+                    onClick={this.playNextSong.bind(this)}
+                  />
+                </Button.Group>
+              </Grid.Column>
+              <Grid.Column width={9} textAlign="center">
+                <Grid
+                  style={{
+                    position: "relative",
+                    top: "15%",
+                    marginLeft: "0.2em",
+                  }}
+                >
+                  <Grid.Row
+                    columns="equal"
+                    style={{ paddingBottom: 0, fontSize: "12px" }}
+                  >
+                    <Grid.Column
+                      textAlign="center"
+                      style={{ fontSize: "11px" }}
+                    >
+                      {this.refs.player &&
+                        readableDuration(this.refs.player.currentTime)}
+                    </Grid.Column>
+                    <Grid.Column
+                      width={9}
+                      textAlign="center"
+                      style={{ marginTop: "0.2em" }}
+                    >
+                      <Progress
+                        ref="songProgress"
+                        active
+                        color="blue"
+                        size="small"
+                        style={{ margin: 0 }}
+                        percent={this.state.progress * 100}
+                        onClick={this.setProgress.bind(this)}
+                      />
+                    </Grid.Column>
+                    <Grid.Column
+                      textAlign="center"
+                      style={{ fontSize: "11px" }}
+                    >
+                      <span>
+                        {this.refs.player &&
+                          readableDuration(this.refs.player.duration)}
+                      </span>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+              </Grid.Column>
+              <Grid.Column
+                width={2}
+                textAlign="center"
+                style={{ paddingLeft: "0.5em" }}
+              >
+                <Button
+                  id="volume-button"
+                  className="mobile-button"
+                  icon={
+                    this.state.volume === 0.0 ? "volume off" : "volume down"
+                  }
+                  onClick={() => {
+                    const slider = document.getElementById("volume-slider");
+                    slider.style.display =
+                      slider.style.display === "none" ? "flex" : "none";
+                  }}
+                />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Segment>
+      </React.Fragment>
+    );
+
+    const hiddenMobilePlayer = (
+      <Button
+        className="mobile-button"
+        content={labels[this.context.lang.get]["music"]["title"]}
+        icon="chevron up"
+        style={{
+          color: "black",
+          position: "fixed",
+          bottom: 0,
+          fontFamily: font,
+          backgroundColor: "rgb(255, 255, 255, 0.8)",
+        }}
+        onClick={this.showMobilePlayer}
+      />
+    );
 
     return (
       <React.Fragment>
@@ -178,183 +404,8 @@ class MusicPlayer extends Component {
         </audio>
         {/* Mobile device view */}
         <MediaQuery maxDeviceWidth={1224}>
-          <Menu
-            id="playlist"
-            vertical
-            borderless
-            size="small"
-            style={{
-              margin: 0,
-              width: "auto",
-              fontFamily: font,
-              position: "fixed",
-            }}
-          >
-            {playlist.map((song, index) => {
-              const isSelected = index === this.state.currentSong;
-              return (
-                <div
-                  key={song.title + isSelected}
-                  onClick={this.selectSong.bind(this, index)}
-                  style={{
-                    fontSize: "11px",
-                    width: "100%",
-                    padding: "0.2em 1em",
-                  }}
-                >
-                  <SongSelectionItem
-                    index={index}
-                    artist={song.artist}
-                    title={song.title}
-                    selected={isSelected}
-                  />
-                </div>
-              );
-            })}
-          </Menu>
-          <Slider
-            id="volume-slider"
-            className="custom-slider"
-            orientation="vertical"
-            value={this.state.volume * 100}
-            aria-labelledby="discrete-slider-small-steps"
-            step={20}
-            marks
-            min={0}
-            max={100}
-            style={{
-              marginTop: "0.2em",
-              position: "fixed",
-              padding: 0,
-              height: "40px",
-              zIndex: "100",
-            }}
-            valueLabelDisplay="auto"
-            onChange={(e, val) => {
-              console.log("Volume: " + this.state.volume);
-              this.setState({ volume: val / 100 });
-            }}
-          />
-          <Segment
-            id="mobile-music-player"
-            style={{
-              width: "100%",
-              position: "fixed",
-              bottom: "0px",
-            }}
-          >
-            <Grid>
-              <Grid.Row centered style={{ padding: "1em 0 0 0" }}>
-                <Header
-                  as="h4"
-                  style={{ fontFamily: "JetBrains Mono", fontSize: "12px" }}
-                >
-                  {playlist[this.state.currentSong].artist} -{" "}
-                  {playlist[this.state.currentSong].title}
-                </Header>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column width={5}>
-                  <Button.Group icon>
-                    <Button
-                      id="playlist-button"
-                      className="mobile-button"
-                      icon="list"
-                      size="mini"
-                      onClick={() => {
-                        const menu = document.getElementById("playlist");
-                        menu.style.display =
-                          menu.style.display === "none" ? "flex" : "none";
-                      }}
-                    />
-                    <Button
-                      className="mobile-button"
-                      icon="angle double left"
-                      size="mini"
-                      onClick={this.playPreviousSong.bind(this)}
-                    />
-                    <Button
-                      ref="playButton"
-                      size="mini"
-                      className="mobile-button"
-                      icon={this.state.isPlaying ? "pause" : "play"}
-                      onClick={this.togglePlay.bind(this)}
-                    />
-                    <Button
-                      className="mobile-button"
-                      icon="angle double right"
-                      size="mini"
-                      onClick={this.playNextSong.bind(this)}
-                    />
-                  </Button.Group>
-                </Grid.Column>
-                <Grid.Column width={9} textAlign="center">
-                  <Grid
-                    style={{
-                      position: "relative",
-                      top: "15%",
-                      marginLeft: "0.2em",
-                    }}
-                  >
-                    <Grid.Row
-                      columns="equal"
-                      style={{ paddingBottom: 0, fontSize: "12px" }}
-                    >
-                      <Grid.Column
-                        textAlign="center"
-                        style={{ fontSize: "11px" }}
-                      >
-                        {this.refs.player &&
-                          readableDuration(this.refs.player.currentTime)}
-                      </Grid.Column>
-                      <Grid.Column
-                        width={9}
-                        textAlign="center"
-                        style={{ marginTop: "0.2em" }}
-                      >
-                        <Progress
-                          ref="songProgress"
-                          active
-                          color="blue"
-                          size="small"
-                          style={{ margin: 0 }}
-                          percent={this.state.progress * 100}
-                          onClick={this.setProgress.bind(this)}
-                        />
-                      </Grid.Column>
-                      <Grid.Column
-                        textAlign="center"
-                        style={{ fontSize: "11px" }}
-                      >
-                        <span>
-                          {this.refs.player &&
-                            readableDuration(this.refs.player.duration)}
-                        </span>
-                      </Grid.Column>
-                    </Grid.Row>
-                  </Grid>
-                </Grid.Column>
-                <Grid.Column
-                  width={2}
-                  textAlign="center"
-                  style={{ paddingLeft: "0.5em" }}
-                >
-                  <Button
-                    id="volume-button"
-                    className="mobile-button"
-                    icon={
-                      this.state.volume === 0.0 ? "volume off" : "volume down"
-                    }
-                    onClick={() => {
-                      const slider = document.getElementById("volume-slider");
-                      slider.style.display =
-                        slider.style.display === "none" ? "flex" : "none";
-                    }}
-                  />
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Segment>
+          {(!this.state.hidePlayer && mobilePlayer) ||
+            (this.state.hidePlayer && hiddenMobilePlayer)}
         </MediaQuery>
 
         {/* Desktop or laptop view */}
