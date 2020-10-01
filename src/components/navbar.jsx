@@ -15,7 +15,7 @@ class Navbar extends Component {
     this.state = { activeItem: itemName };
   }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  handleItemClick = (e, { id }) => this.setState({ activeItem: id });
 
   handleLanguageSelection(language) {
     if (language !== null) {

@@ -61,9 +61,7 @@ class App extends Component {
                   </Switch>
                 </Segment>
               </Grid.Column>
-              {/*
-              Music Player
-            */}
+              {/* Music Player */}
               <Grid.Column width={4}>
                 <Rail internal position="right" style={{ width: "100%" }}>
                   <Sticky context={this.contextRef}>
