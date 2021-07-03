@@ -1,5 +1,5 @@
 <h1 align="center">献给每个孤独车手的音乐</h1>
-<h3 align="center">Eurobeat入门 </h3>
+<h3 align="center">Eurobeat入门</h3>
 
 我喜欢的音乐种类很多，像流行、摇滚、金属、爵士还有City Pop多少都有点了解，但是到目前为止，Eurobeat是我除了Pop以外唯一不间断地听了半年以上而且想系统性去了解的音乐类型。从去年八月份到现在，我陆陆续续地下载了一百多张SEB专辑，也在YouTube上听了几十个Compilation，可以说是刚刚入门。这篇文章总结了Eurobeat的入门知识。如果你在听了Deja Vu、Running in the 90's或是在看完头文字D以后也和我一样被Eurobeat所吸引，希望这里的内容作为一个出发点，让你进一步爱上这种富有魅力的音乐类型。
 
