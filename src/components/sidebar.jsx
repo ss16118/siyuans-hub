@@ -75,6 +75,12 @@ class NavigationMenu extends Component {
             );
           })}
           <Menu.Item
+            name="CV"
+            link={true}
+            href="../siyuans-hub/contents/files/Siyuan_Shen_CV.pdf"
+            style={{ fontFamily: font, paddingLeft: "2em" }}
+          ></Menu.Item>
+          <Menu.Item
             attached="bottom"
             style={{ marginTop: "155%", textAlign: "center", border: "none" }}
           >

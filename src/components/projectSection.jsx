@@ -3,21 +3,22 @@ import { Card, Button, Icon } from "semantic-ui-react";
 
 class ProjectSection extends Component {
   buttonText = {
-    en: ["View Source Code", "View Document"],
-    cn: ["查看源代码", "查看文件"],
+    en: ["View Source Code", "View Paper"],
+    cn: ["查看源代码", "查看论文"],
   };
   buttonIcon = ["github", "file"];
   constructor(props) {
     super(props);
     this.state = {
       title: props.title,
+      type: props.type,
       lang: props.lang,
       description: props.description,
       link: props.link,
     };
   }
   render() {
-    const isDocument = !this.state.link.startsWith("https");
+    const isDocument = this.state.type !== "source code";
     const buttonText = this.buttonText[this.state.lang][isDocument | 0];
     const buttonIcon = this.buttonIcon[isDocument | 0];
     const font = this.state.lang === "en" ? "JetBrains Mono" : "Noto Sans";

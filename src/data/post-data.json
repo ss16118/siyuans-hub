@@ -1,5 +1,39 @@
 [
   {
+    "id": "bit-torrent-client-cpp",
+    "title": {
+      "en": "The Joy of Reinventing the Wheel: Writing a Simple BitTorrent Client in C++ from Scratch",
+      "cn": "重复造轮子的喜悦：从零开始用C++写一个最基础的BitTorrent客户端"
+    },
+    "date": "20/06/2021",
+    "tags": {
+      "en": ["C++", "BitTorrent Client", "Programming"],
+      "cn": ["C++", "BitTorrent客户端", "编程"]
+    },
+    "image": "/siyuans-hub/contents/posts/bit-torrent-client-cpp/bit-torrent-client-cpp.png",
+    "path": {
+      "en": "/siyuans-hub/contents/posts/bit-torrent-client-cpp/bit-torrent-client-cpp-en.md",
+      "cn": "/siyuans-hub/contents/posts/bit-torrent-client-cpp/bit-torrent-client-cpp-cn.md"
+    }
+  },
+  {
+    "id": "intro-to-eurobeat",
+    "title": {
+      "en": "Music for Every Lonely Driver: An Introduction to Eurobeat",
+      "cn": "献给每个孤独车手的音乐：Eurobeat入门"
+    },
+    "date": "07/02/2021",
+    "tags": {
+      "en": ["Music", "Eurobeat"],
+      "cn": ["音乐", "Eurobeat"]
+    },
+    "image": "/siyuans-hub/contents/posts/intro-to-eurobeat/intro-to-eurobeat.jpg",
+    "path": {
+      "en": "/siyuans-hub/contents/posts/intro-to-eurobeat/intro-to-eurobeat-en.md",
+      "cn": "/siyuans-hub/contents/posts/intro-to-eurobeat/intro-to-eurobeat-cn.md"
+    }
+  },
+  {
     "id": "permanent-record",
     "title": {
       "en": "A Selfless Hero or a Shameless Traitor: Random Thoughts on \"Permanent Record\"",
@@ -24,8 +58,8 @@
     },
     "date": "27/07/2020",
     "tags": {
-      "en": ["VS Code Extension", "Typescript", "Custom Programming Language"],
-      "cn": ["VS Code 插件", "Typescript", "自制编程语言"]
+      "en": ["VS Code Extension", "Typescript", "Custom Programming Language", "Programming"],
+      "cn": ["VS Code 插件", "Typescript", "自制编程语言", "编程"]
     },
     "image": "/siyuans-hub/contents/posts/vscode-extension-for-custom-language/vscode-logo.png",
     "path": {

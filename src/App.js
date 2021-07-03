@@ -27,7 +27,7 @@ class App extends Component {
               }}
             >
               <Grid.Column width={3}>
-                <Rail internal position="left" style={{ width: "100%" }}>
+                <Rail internal position="left" style={{ width: "100%", marginLeft: 0 }}>
                   <Sticky context={this.contextRef}>
                     <NavigationMenu />
                   </Sticky>
@@ -63,7 +63,7 @@ class App extends Component {
               </Grid.Column>
               {/* Music Player */}
               <Grid.Column width={4}>
-                <Rail internal position="right" style={{ width: "100%" }}>
+                <Rail internal position="right" style={{ width: "100%", marginRight: 0 }}>
                   <Sticky context={this.contextRef}>
                     <MusicPlayer />
                   </Sticky>

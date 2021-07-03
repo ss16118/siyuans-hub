@@ -74,6 +74,11 @@ class Navbar extends Component {
               />
             );
           })}
+          <Menu.Item
+            name="CV"
+            href="../siyuans-hub/contents/files/Siyuan_Shen_CV.pdf"
+            style={{ fontFamily: font}}
+          ></Menu.Item>
           <Dropdown item text={langMenu[lang]} style={{ fontFamily: font }}>
             <Dropdown.Menu>
               <Dropdown.Item onClick={() => this.handleLanguageSelection("en")}>

@@ -95,6 +95,10 @@ a:hover {
   padding: 1em !important;
 }
 
+.ui.divided.items > .item {
+  padding: 1em !important;
+}
+
 pre {
   background-color: rgb(240, 240, 240) !important;
   padding: 1em !important;

@@ -15,6 +15,9 @@ class Projects extends Component {
       <div>
         <h1 style={{ fontFamily: font }}>{this.pageTitle[lang]}</h1>
         <Segment>
+          {/**
+           * On mobile
+          */}
           <MediaQuery maxDeviceWidth={1224}>
             <Card.Group itemsPerRow={1}>
               {projectData.map((project) => {
@@ -23,6 +26,7 @@ class Projects extends Component {
                     key={project.title[lang] + lang}
                     lang={lang}
                     title={project.title[lang]}
+                    type={project.type}
                     description={project.description[lang]}
                     link={project.link}
                   />
@@ -38,6 +42,7 @@ class Projects extends Component {
                     key={project.title[lang] + lang}
                     lang={lang}
                     title={project.title[lang]}
+                    type={project.type}
                     description={project.description[lang]}
                     link={project.link}
                   />

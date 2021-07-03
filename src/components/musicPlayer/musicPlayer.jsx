@@ -473,7 +473,7 @@ class MusicPlayer extends Component {
                     </Grid.Column>
                   </Grid.Row>
                   {/* Controls */}
-                  <Grid.Row centered style={{ paddingLeft: "32%" }}>
+                  <Grid.Row centered style={{paddingLeft: "32%"}}>
                     <Grid.Column width={5}>
                       <Grid>
                         <Grid.Row columns="equal" centered>
@@ -517,7 +517,7 @@ class MusicPlayer extends Component {
                         </Grid.Row>
                       </Grid>
                     </Grid.Column>
-                    <Grid.Column width={8} style={{ paddingLeft: "2em" }}>
+                    <Grid.Column width={8} style={{paddingLeft: "2em"}}>
                       <Grid>
                         <Grid.Row columns="equal" centered>
                           <Grid.Column textAlign="center" width={5}>

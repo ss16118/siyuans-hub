@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import MobileApp from "./MobileApp";
 import App from "./App";
+import 'semantic-ui-css/semantic.min.css'
 class WebApp extends Component {
   render() {
     return (
